@@ -6,7 +6,7 @@ A House Rental Management Application, which helps landlords and tenants mangage
 
 ## Deployed Link
 
--   RentSure Frontend - [Deployed Frontend Link](https://rent-sure.vercel.app/)
+-   RentSure Frontend - [Deployed Frontend Link](https://rentsure.vercel.app/)
 -   RentSure Backend API - [Deployed Backend Link](https://houserentalapi-production.up.railway.app/)
 
 ## Features
