@@ -13,9 +13,8 @@ const ComplaintCard = ({ complaintId, title, message, status, from, to }) => {
     };
     return (
         <div
-            className={`card mb-3 border-2 ${
-                !status ? "border-success" : "border-danger"
-            }`}
+            className={`card mb-3 border-2 ${!status ? "border-success" : "border-danger"
+                }`}
         >
             <div className="card-header d-flex align-items-start">
                 <h3 className="card-title mb-0 text-start">{title}</h3>
@@ -28,12 +27,12 @@ const ComplaintCard = ({ complaintId, title, message, status, from, to }) => {
                     </button>
                 ) : (
                     <>
-                            <button
-                                className="btn btn-success btn-sm mx-2"
-                                disabled
-                            >
-                                Resolved
-                            </button>
+                        <button
+                            className="btn btn-success btn-sm mx-2"
+                            disabled
+                        >
+                            Resolved
+                        </button>
                     </>
                 )}
             </div>

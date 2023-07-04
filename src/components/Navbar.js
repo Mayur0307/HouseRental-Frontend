@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Logo from "../Assets/Logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
@@ -15,32 +15,21 @@ import { Link } from 'react-router-dom';
 // import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
-   const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
-//   const { user, logout } = useContext(AuthContext);
-//    const handleLogout = () => {
-//     logout();
-// };
-   const menuOptions = [
-  //   {
-  //     text: "Home",
-  //     icon: <HomeIcon />,
-  //   },
-  //   {
-  //     text: "About",
-  //     icon: <InfoIcon />,
-  //   },
-  //   
-   ];
+
+  const menuOptions = [
+
+  ];
   return (
     <nav>
       <div className="nav-logo-container">
         <img src={Logo} alt="" />
       </div>
       <div className="navbar-links-container">
-      
-        <Link to='/signin' style={{color:'#003466'}}>Sign in as Landlord</Link>
-        <Link to='/tenant/signin'  style={{color:'#003466'}}>Sign in as Tentant</Link>
+
+        <Link to='/signin' style={{ color: '#003466' }}>Sign in as Landlord</Link>
+        <Link to='/tenant/signin' style={{ color: '#003466' }}>Sign in as Tentant</Link>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />

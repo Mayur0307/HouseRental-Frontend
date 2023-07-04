@@ -25,7 +25,7 @@ const ComplaintPage = () => {
             });
     };
 
-    
+
     const fetchTenant = () => {
         let apiUrl = `https://houserentalapi-production.up.railway.app/api/tenant/getall`;
         return fetch(apiUrl, {
@@ -57,17 +57,15 @@ const ComplaintPage = () => {
                     <div className="complaints-page">
                         <div className="tabs">
                             <button
-                                className={`tab ${
-                                    activeTab === "incoming" ? "active" : ""
-                                }`}
+                                className={`tab ${activeTab === "incoming" ? "active" : ""
+                                    }`}
                                 onClick={() => handleTabClick("incoming")}
                             >
                                 Incoming
                             </button>
                             <button
-                                className={`tab ${
-                                    activeTab === "outgoing" ? "active" : ""
-                                }`}
+                                className={`tab ${activeTab === "outgoing" ? "active" : ""
+                                    }`}
                                 onClick={() => handleTabClick("outgoing")}
                             >
                                 Outgoing
@@ -77,7 +75,7 @@ const ComplaintPage = () => {
                             {activeTab === "incoming" &&
                                 data.map((complaint) =>
                                     complaint.to === user.id &&
-                                    findTenantById(complaint.from) ? (
+                                        findTenantById(complaint.from) ? (
                                         <>
                                             <ComplaintCard
                                                 key={complaint.id}
@@ -98,7 +96,7 @@ const ComplaintPage = () => {
                             {activeTab === "outgoing" &&
                                 data.map((complaint) =>
                                     complaint.from === user.id &&
-                                    findTenantById(complaint.to) ? (
+                                        findTenantById(complaint.to) ? (
                                         <>
                                             <ComplaintCard
                                                 key={complaint.id}
@@ -121,8 +119,8 @@ const ComplaintPage = () => {
             </div>
         );
     }
-    else{
-        <NotLoggedIn/>
+    else {
+        <NotLoggedIn />
     }
 };
 

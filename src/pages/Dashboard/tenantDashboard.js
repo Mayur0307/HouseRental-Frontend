@@ -85,7 +85,7 @@ const TenantDashboard = () => {
                                             {tenant.rentPaid ? (
                                                 <p className="text-success">Rent is up to date</p>
                                             ) : (
-                                                <p className="text-danger">Rent due: {tenant.rentDue}</p> 
+                                                <p className="text-danger">Rent due: {tenant.rentDue}</p>
                                             )}
                                         </div>
                                     </div>
