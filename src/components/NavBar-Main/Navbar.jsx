@@ -10,11 +10,11 @@ const NavBar = () => {
 
     const handleLogout = () => {
         logout();
-        window.location.pathname='/';
+        window.location.pathname = '/';
     }
     const handleTenantLogout = () => {
         tenantLogout();
-        window.location.pathname='/';
+        window.location.pathname = '/';
     }
 
     if (user) {
@@ -46,7 +46,7 @@ const NavBar = () => {
                             className="profile-dropdown">
                             <NavDropdown.Item href="/addProperty">Add Property</NavDropdown.Item>
                             {/* <NavDropdown.Item href="/raiseComplaint">Raise Complaint</NavDropdown.Item> */}
-                            <NavDropdown.Item href="/reset-password">Reset Password</NavDropdown.Item>
+                            {/* <NavDropdown.Item href="/reset-password">Reset Password</NavDropdown.Item> */}
                             <NavDropdown.Item><button onClick={handleLogout} className='btn btn-danger'>Logout</button></NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
@@ -69,8 +69,8 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                    <Nav.Link href="/tenant/dashboard">Dashboard</Nav.Link>
-                    <Nav.Link href="/tenant/complaints">Complaint</Nav.Link>
+                        <Nav.Link href="/tenant/dashboard">Dashboard</Nav.Link>
+                        <Nav.Link href="/tenant/complaints">Complaint</Nav.Link>
                         <NavDropdown
                             title={
                                 <div>
@@ -91,9 +91,9 @@ const NavBar = () => {
                             {/* <NavDropdown.Item href="/raiseComplaint">
                                 Raise Complaint
                             </NavDropdown.Item> */}
-                            <NavDropdown.Item href="/reset-password">
+                            {/* <NavDropdown.Item href="/reset-password">
                                 Reset Password
-                            </NavDropdown.Item>
+                            </NavDropdown.Item> */}
                             <NavDropdown.Item>
                                 <button
                                     onClick={handleTenantLogout}
@@ -108,28 +108,7 @@ const NavBar = () => {
             </Navbar>
         );
     }
-    // else {
-    //     return (
-    //         <Navbar expand="lg" className="slim-navbar">
-    //             <Navbar.Brand href="/dashboard">
-    //                 <img
-    //                     src={Logo}
-    //                     width="150"
-    //                     height="0"
-    //                     className="d-inline-block align-top"
-    //                     alt="Logo"
-    //                 />
-    //             </Navbar.Brand>
-    //             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    //             <Navbar.Collapse id="basic-navbar-nav">
-    //                 <Nav className="ml-auto">
-    //                     <Nav.Link href='/signup'><button className='btn btn-outline-primary'>SignUp</button></Nav.Link>
-    //                     <Nav.Link href='/signin'><button className='btn btn-primary'>Login</button></Nav.Link>
-    //                 </Nav>
-    //             </Navbar.Collapse>
-    //         </Navbar>
-    //     );
-    // }
+
 };
 
 export default NavBar;

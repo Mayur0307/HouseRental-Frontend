@@ -29,7 +29,8 @@
 
 .tabs {
   display: flex;
-  justify-content: center; /* Center align tabs */
+  justify-content: center;
+  /* Center align tabs */
   margin-bottom: 16px;
 }
 
@@ -43,7 +44,7 @@
   transition: background-color 0.3s ease-in-out;
   border-radius: 20px;
   outline: none;
-  margin: 0 8px; 
+  margin: 0 8px;
 }
 
 .tab.active {
@@ -127,10 +128,10 @@
 .complaint-card .metadata .to {
   font-weight: bold;
 }
+
 .main-content {
   flex-grow: 1;
   padding: 20px;
   overflow: auto;
 
 }
-

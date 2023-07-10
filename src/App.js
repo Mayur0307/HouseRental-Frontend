@@ -17,32 +17,32 @@ import NotLoggedIn from './components/NotLoggedin/NotLoggedIn';
 
 
 function App() {
-  return (
-      <>
-          <Router>
-              <AuthProvider>
-                  <Routes>
-                      <Route path="/" element={<Landing />} />
-                      <Route path="/dashboard" element={<Dashboard />} />
-                      <Route path="/tenant/dashboard" element={<TenantDashboard />} />
-                      <Route path="/signup" element={<SignUp />} />
-                      <Route path="/signin" element={<SignIn />} />
-                      <Route path="/tenant/signin" element={<SigninTenant />} />
-                      <Route path="/property" element={<Property />} />
-                      <Route path="/complaints" element={<ComplaintsPage />} />
-                      <Route path="/tenant/complaints" element={<TenantComplaint />} />
-                      <Route path="/addproperty" element={<AddProperty />} />
-                      <Route path="/loggedout" element={<NotLoggedIn />} />
-                      <Route
-                          path="/raisecomplaint"
-                          element={<RaiseComplaint />}
-                      />
-                      <Route path="/addtenant" element={<AddTenant />} />
-                  </Routes>
-              </AuthProvider>
-          </Router>
-      </>
-  );
+    return (
+        <>
+            <Router>
+                <AuthProvider>
+                    <Routes>
+                        <Route path="/" element={<Landing />} />
+                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route path="/tenant/dashboard" element={<TenantDashboard />} />
+                        <Route path="/signup" element={<SignUp />} />
+                        <Route path="/signin" element={<SignIn />} />
+                        <Route path="/tenant/signin" element={<SigninTenant />} />
+                        <Route path="/property" element={<Property />} />
+                        <Route path="/complaints" element={<ComplaintsPage />} />
+                        <Route path="/tenant/complaints" element={<TenantComplaint />} />
+                        <Route path="/addproperty" element={<AddProperty />} />
+                        <Route path="/loggedout" element={<NotLoggedIn />} />
+                        <Route
+                            path="/raisecomplaint"
+                            element={<RaiseComplaint />}
+                        />
+                        <Route path="/addtenant" element={<AddTenant />} />
+                    </Routes>
+                </AuthProvider>
+            </Router>
+        </>
+    );
 };
 
 

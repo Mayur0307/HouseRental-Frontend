@@ -1,37 +1,37 @@
-  import React, { useContext, useState } from 'react';
-  import { Link } from 'react-router-dom';
-  import { AuthContext } from '../../context/AuthContext';
-  import './SignUp.css';
-  import 'bootstrap/dist/css/bootstrap.min.css';
-  import 'bootstrap/dist/js/bootstrap.min.js';
-  
-  
-  export default function SignUp() {
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
+import './SignUp.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
+
+export default function SignUp() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [confpassword, setConfPassword] = useState('');
     const { signup } = useContext(AuthContext);
-  
+
     const handleSubmit = (event) => {
-      event.preventDefault();
+        event.preventDefault();
 
-      if (password !== confpassword) {
-        alert("Passwords do not match");
-        return;
-      }
+        if (password !== confpassword) {
+            alert("Passwords do not match");
+            return;
+        }
 
-      const userData = {
-        name,
-        phone,
-        email,
-        password,
-      };
-      
-      signup(userData);
+        const userData = {
+            name,
+            phone,
+            email,
+            password,
+        };
+
+        signup(userData);
     };
-  
+
     return (
         <div>
             <div className="mx-auto w-50 p-5 border border-3 mt-5">
@@ -117,5 +117,4 @@
             </div>
         </div>
     );
-  }
-  
+}

@@ -9,7 +9,7 @@ import Hero from '../../components/Hero/Hero';
 import propertymanagement from '../../Assets/propertymanagement.png';
 import paymenttracking from '../../Assets/paymenttracking.png';
 import viewtentants from '../../Assets/viewtentants.png';
-import"./Landing.css"
+import "./Landing.css"
 
 const Landing = () => {
 

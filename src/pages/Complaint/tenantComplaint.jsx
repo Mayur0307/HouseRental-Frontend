@@ -39,66 +39,66 @@ const TenantComplaint = () => {
     useEffect(() => {
         fetchInfo();
         fetchLandLord();
-    },[data]);
+    }, [data]);
 
     if (tenantUser) {
         return (
             <div>
-            <NavBar />
-            <div className="main-content">
-                <h2 className="px-5 pt-5">Complaints</h2>
-                <div className="complaints-page">
-                    <div className="tabs">
-                        <button
-                            className={`tab ${activeTab === "incoming" ? "active" : ""
-                                }`}
-                            onClick={() => handleTabClick("incoming")}
-                        >
-                            Incoming
-                        </button>
-                        <button
-                            className={`tab ${activeTab === "outgoing" ? "active" : ""
-                                }`}
-                            onClick={() => handleTabClick("outgoing")}
-                        >
-                            Outgoing
-                        </button>
-                    </div>
-                    <div className="complaints-container">
-                        {activeTab === "incoming" &&
-                            data.map((complaint) =>
-                                complaint.to === tenantUser.id &&
-                                    tenantUser.id ? (
-                                    <ComplaintCard
-                                        key={complaint.id}
-                                        title={complaint.title}
-                                        message={complaint.content}
-                                        status={complaint.active}
-                                        from={
-                                            landlord.name
-                                        }
-                                        to={tenantUser.name}
-                                    />
-                                ) : null
-                            )}
-                        {activeTab === "outgoing" &&
-                            data.map((complaint) =>
-                                complaint.from === tenantUser.id &&
-                                    tenantUser.id ? (
-                                    <ComplaintCard
-                                        key={complaint.id}
-                                        title={complaint.title}
-                                        message={complaint.content}
-                                        from={tenantUser.name}
-                                        to={landlord.name}
-                                        status={complaint.active}
-                                    />
-                                ) : null
-                            )}
+                <NavBar />
+                <div className="main-content">
+                    <h2 className="px-5 pt-5">Complaints</h2>
+                    <div className="complaints-page">
+                        <div className="tabs">
+                            <button
+                                className={`tab ${activeTab === "incoming" ? "active" : ""
+                                    }`}
+                                onClick={() => handleTabClick("incoming")}
+                            >
+                                Incoming
+                            </button>
+                            <button
+                                className={`tab ${activeTab === "outgoing" ? "active" : ""
+                                    }`}
+                                onClick={() => handleTabClick("outgoing")}
+                            >
+                                Outgoing
+                            </button>
+                        </div>
+                        <div className="complaints-container">
+                            {activeTab === "incoming" &&
+                                data.map((complaint) =>
+                                    complaint.to === tenantUser.id &&
+                                        tenantUser.id ? (
+                                        <ComplaintCard
+                                            key={complaint.id}
+                                            title={complaint.title}
+                                            message={complaint.content}
+                                            status={complaint.active}
+                                            from={
+                                                landlord.name
+                                            }
+                                            to={tenantUser.name}
+                                        />
+                                    ) : null
+                                )}
+                            {activeTab === "outgoing" &&
+                                data.map((complaint) =>
+                                    complaint.from === tenantUser.id &&
+                                        tenantUser.id ? (
+                                        <ComplaintCard
+                                            key={complaint.id}
+                                            title={complaint.title}
+                                            message={complaint.content}
+                                            from={tenantUser.name}
+                                            to={landlord.name}
+                                            status={complaint.active}
+                                        />
+                                    ) : null
+                                )}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         );
     } else {
         return <h1>Sign In</h1>;

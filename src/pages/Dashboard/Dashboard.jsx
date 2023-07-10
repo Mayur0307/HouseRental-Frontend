@@ -130,7 +130,7 @@ function Dashboard() {
                             </Card>
                         </Col>
                         <Col md={6} lg={4} className="col-sm-12" >
-                            <Card style={{ width: '100%', backgroundColor: "#00BFFF"  }}>
+                            <Card style={{ width: '100%', backgroundColor: "#00BFFF" }}>
 
                                 <Card.Body>
                                     <div className="icon ms-auto">
@@ -147,11 +147,11 @@ function Dashboard() {
                                 </Card.Body>
                             </Card>
                         </Col>
-                       
+
                     </Row>
                 </div>
             </React.Fragment >
-            
+
         </>
     );
 
